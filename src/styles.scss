@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+
+* {
+  margin: 0%;
+  padding: 0%;
+  font-family: 'Inter', sans-serif;
+}
+
+body{
+  background-image: url(https://motorshow.com.br/wp-content/uploads/sites/2/2020/06/all-new_f-150_003.jpeg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  opacity: 0.95;
+}
