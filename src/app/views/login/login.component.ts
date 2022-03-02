@@ -1,4 +1,5 @@
 import { Component,  OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { RequestLogin } from 'src/app/resource/models/RequestLogin';
 import { AlertService } from 'src/app/resource/services/alert.service';
 import { LoginService } from 'src/app/resource/services/login.service';
@@ -15,7 +16,8 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private loginService: LoginService,
-    private alertService: AlertService
+    private alertService: AlertService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -28,7 +30,7 @@ export class LoginComponent implements OnInit {
     this.loginService.doLogin(this.requestLogin).subscribe(
       (data) => {
 
-          this.alertService.info('Implementando pagina, aguarde!!');
+        this.router.navigate(['dashboard']);
       },
       (httpError) => {
 
